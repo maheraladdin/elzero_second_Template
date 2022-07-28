@@ -16,7 +16,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <header id="header">
   <div class="dark_layer">
   <div class="container">
@@ -24,7 +23,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       <a href="#"><img src="https://lh3.googleusercontent.com/wXu9B6cq0F5v87xZWxnDmcAtl4Aj8OeBjg4evL14bCkH404P9ItrxfiettDC_TRJFms18ScOPo-NTVnYTo-EO5CrVi9_OgFK9Wf7k8wDGaoFsLcK0zHPBLcjWpvLJ9usGQNbivdB=w2400" alt="kasper template logo"></a>
       <div id="links">
       <ul id="header_list">
-        <li><a href="#">home</a></li>
+        <li class="active_section_border_bottom"><a href="#" class="active_section_color">home</a></li>
         <li><a href="#services">services</a></li>
         <li><a href="#portfolio">portfolio</a></li>
         <li><a href="#about">about</a></li>
@@ -61,10 +60,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     <i class="fa-solid fa-angle-right fa-3x" id="right"></i>
     </div>
 </header>
+<!-- Start Services section -->
 <section id="services">
   <div class="container">
-    <h2>services</h2>
-    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+    <h2 class="section_heading">services</h2>
+    <p class="section_description">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
       blandit aliquet elit, eget tincidunt.</p>
 <!-- Start  Service one   -->
     <div class="grid">
@@ -148,8 +148,9 @@ a. Curabitur aliquet quam.</p>
 <!-- Start portfolio section -->
 <section id="portfolio">
   <div class="container">
-    <h2>portfolio</h2>
-    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+    <h2 class="section_heading">portfolio</h2>
+    <p class="section_description">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+      blandit aliquet elit, eget tincidunt.</p>
 </p>
     <div id="filter">
       <span class="active_filter">all</span>
@@ -231,10 +232,9 @@ a. Curabitur aliquet quam.</p>
 <section id="about">
   <div class="container">
     <div id="intor_about">
-    <h2>ABOUT US</h2>
-    <p>
-      Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
-</p>
+    <h2 class="section_heading">about us</h2>
+    <p class="section_description">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+      blandit aliquet elit, eget tincidunt.</p>
     </div>
   </div>
   <div id="numbers">
@@ -340,17 +340,16 @@ a. Curabitur aliquet quam.</p>
 <section id="pricing">
   <div class="container">
     <div id="intro_pricing">
-    <h2>Pricing</h2>
-    <p>
-      Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
-</p>
+<h2 class="section_heading">pricing</h2>
+    <p class="section_description">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+      blandit aliquet elit, eget tincidunt.</p>
       <div id="prices">
         <div class="price_card">
           <div class="top_price_card">
             <p>
               BASIC
             </p>
-            <h2>19</h2>
+            <h2 data-current="$">19</h2>
           </div>
           <div class="middle_price_card">
             <p>
@@ -375,7 +374,7 @@ a. Curabitur aliquet quam.</p>
             <p>
               BASIC
             </p>
-            <h2>29</h2>
+            <h2 data-current="$">29</h2>
           </div>
           <div class="middle_price_card">
             <p>
@@ -400,7 +399,7 @@ a. Curabitur aliquet quam.</p>
             <p>
               BASIC
             </p>
-            <h2>39</h2>
+            <h2 data-current="$">39</h2>
           </div>
           <div class="middle_price_card">
             <p>
@@ -425,7 +424,7 @@ a. Curabitur aliquet quam.</p>
             <p>
               basic
             </p>
-            <h2>49</h2>
+            <h2 data-current="$">49</h2>
           </div>
           <div class="middle_price_card">
             <p>
@@ -453,10 +452,14 @@ a. Curabitur aliquet quam.</p>
     </div>
   </div>
   <div id="subscribe">
-    <form>
+    <form action="#">
+      <label>
       <i class="fa-solid fa-envelope fa-2"></i>
       <input type="email" placeholder="your email" />
+      </label>
+      <label>
       <input type="submit" />
+      </label>
     </form>
     <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.</p>
   </div>
@@ -468,9 +471,9 @@ a. Curabitur aliquet quam.</p>
 
 <section id="contact_us">
   <div class="container">
-    <h2>CONTACT US
-</h2>
-    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+    <h2 class="section_heading">contact us</h2>
+    <p class="section_description">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris 
+      blandit aliquet elit, eget tincidunt.</p>
     <div class="grid-inputs">
       <form action="#" class="col-inputs">
           <input type="text" placeholder="your name" />
@@ -492,12 +495,12 @@ a. Curabitur aliquet quam.</p>
           <h3>
             WHERE WE ARE
           </h3>
-          <p>
+          <address>
             Awesome Address 17<br />
             New York, NYC<br />
             123-4567-890<br />
             USA
-          </p>
+          </address>
           </div>
       </div>
     </div>
@@ -510,15 +513,15 @@ a. Curabitur aliquet quam.</p>
   <footer>
     <div class="logo"></div>
     <div>
-    <p>WE ARE SOCIAL</p>
+    <p>we are social</p>
     <div>
-      <i class="fa-brands fa-facebook-f"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-github"></i>
-      <i class="fa-brands fa-linkedin"></i>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
     </div>
     </div>
-    <p>&copy 2021 <span>Kasper</span> All Right Reserved</p>
+    <p>&copy 2021 <a href="#">Kasper</a> All Right Reserved</p>
   </footer>
   
 <!-- End footer -->
@@ -531,8 +534,9 @@ a. Curabitur aliquet quam.</p>
   </a>
 <!-- End scroll to top -->
 
-<!-- partial -->
-  <script  src="./script.js"></script>
-
-</body>
+<!-- Start go to design -->
+<a href="https://www.graphberry.com/item/kasper-one-page-psd-template" id="design" target="_blank">
+  go to design
+</a>
+<!-- end go to design --></body>
 </html>
