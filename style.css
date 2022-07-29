@@ -113,6 +113,50 @@ input:focus
   margin-bottom: 50px;
 }
 
+main {
+  position: relative;
+  bottom: 20px;
+  transition: 0.3s;
+}
+
+.dark_mode input {
+  -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+
+.dark_mode input::after {
+  content: "\f186";
+  font-family: 'Font Awesome\ 5 Free';
+  color: white;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: block;
+  z-index: 1000;
+}
+
+.dark_mode input:checked::after {
+  content: "\f185";
+  background-color: yellow;
+  color: #000;
+  transition: 0.3s;
+}
+
+.dark_mode input:checked + main {
+  background-color: var(--dark);
+  color: white;
+}
+
 /* End Global rules */
 
 /* Start Header styling */
@@ -507,6 +551,7 @@ nav {
 #simples {
   display: grid;
   row-gap: 5px;
+  color: #000;
 }
 
 @media (min-width: 768px) {
@@ -973,7 +1018,7 @@ nav {
   display: block;
   width: 0;
   height: 0;
-  border-top: 10px solid var(--dark);
+  border-top: 10px solid #000;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   position: absolute;
@@ -981,19 +1026,22 @@ nav {
   top: -15px;
 }
 
-.progress_bar_complete.one:after {
-  content: "90%";
+.progress_bar_complete:after {
   display: block;
   position: absolute;
   width: 40px;
   height: 25px;
-  background-color: var(--dark);
+  background-color: #000;
   color: white;
   top: -35px;
   right: -20px;
   text-align: center;
   line-height: 25px;
   border-radius: 5px;
+}
+
+.progress_bar_complete.one:after {
+  content: "90%";
 }
 
 .progress_bar_complete.two {
@@ -1002,17 +1050,6 @@ nav {
 
 .progress_bar_complete.two:after {
   content: "85%";
-  display: block;
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  background-color: var(--dark);
-  color: white;
-  top: -35px;
-  right: -20px;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 5px;
 }
 
 .progress_bar_complete.three {
@@ -1021,17 +1058,6 @@ nav {
 
 .progress_bar_complete.three:after {
   content: "80%";
-  display: block;
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  background-color: var(--dark);
-  color: white;
-  top: -35px;
-  right: -20px;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 5px;
 }
 
 .progress_bar_complete.four {
@@ -1040,17 +1066,6 @@ nav {
 
 .progress_bar_complete.four:after {
   content: "90%";
-  display: block;
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  background-color: var(--dark);
-  color: white;
-  top: -35px;
-  right: -20px;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 5px;
 }
 
 #quote {
@@ -1137,8 +1152,9 @@ nav {
 
 #prices .price_card {
   width: 250px;
-  background-color: #eee;
   text-transform: capitalize;
+  background-color: #eee;
+  color: #000;
 }
 
 #prices .price_card .top_price_card {
@@ -1227,6 +1243,7 @@ nav {
   width: fit-content;
   position: relative;
   margin: 0 auto;
+  background-color: #eee;
 }
 
 #contact + a:hover {
@@ -1429,8 +1446,9 @@ footer {
   color: white;
   justify-content: space-between;
   padding: 40px 0;
-  position: relative;
+  position: absolute;
   overflow: hidden;
+  width: 100%;
 }
 
 footer::after {
